@@ -1,33 +1,63 @@
-## Pandas Checkpoint
+# Disney+ Data Analysis – Python & Pandas Project  
 
-Read the data from disney_plus.csv into a pandas DataFrame.
+This project explores the **Disney+ dataset** using Python and Pandas to perform data wrangling, descriptive statistics, and visualization tasks. The analysis focuses on understanding content distribution, ratings, durations, and release trends for movies and TV shows available on the platform.  
 
-1. Create a new dataframe named "movies_df" consisting of only movies.
+The project was completed as part of the **Nashville Software School (NSS) Data Analytics Bootcamp**, serving as a checkpoint exercise to practice core Python and Pandas skills.  
 
-2. Create a new dataframe named "movie_ratings" from movies_df that consists of the top 5 ratings by count. This dataframe should consist of only two columns, rating and count.
+---
 
-3. Use the movie_ratings dataframe to create a bar chart showing count of the top 5 ratings.
+## Project Overview  
 
-4. Using the movies_df, subset the data to create a new dataframe named "year_duration" that only consists of 2 columns, release_year and duration.
+Using the dataset `disney_plus.csv`, I answered key questions such as:  
 
-5. Find min, max, and average duration of movies from the 1975-1984.
+1. What are the top 5 movie ratings by count?  
+2. How do movie durations vary across years?  
+3. What are the min, max, and average durations for movies from 1975–1984?  
+4. Which year had the most G-rated releases?  
+5. Which year had the most total releases, and what share were over 2 hours?  
+6. How can movies be categorized into **short**, **average**, and **long** durations?  
+7. Which movie had the largest gap between release and being added to Disney+?  
+8. How many movies were added after the 2020 pandemic lockdown?  
+9. How many titles contain the word "dog" in their name?  
 
-6. Create a scatterplot using year_duration that looks at movie durations over the years.  Do you notice any correlation from inspecting the scatterplot?
+The analysis also includes **bar charts, scatterplots, and pie charts** created with Matplotlib/Seaborn.  
 
-7. Find the actual correlation value, is there any correlation?
+---
 
-8. Use movie_df to find which year had the most G-rated releases. Can you do this in a single line of code?
+## Tools & Technologies Used  
 
-9. Which year had the most movie releases?  What percentage of movies that year had durations over 2 hours?
+- **Python (Jupyter Notebook)** – For analysis and coding practice  
+- **Pandas** – Data filtering, aggregation, transformation  
+- **Matplotlib & Seaborn** – Data visualization  
+- **CSV Dataset (`disney_plus.csv`)** – Disney+ catalog data  
 
-10. Create a new column in movies_df that catagorizes each movie as either short, average, or long.  Short movies should be 30 mins or less, long movies should be over 2 hours.
+---
 
-11. Make a pie chart of the above movie lengths.
+## Key Insights  
 
-12. Which movie had the greatest gap from the year it was released to the year it was added?  What is the average number of years between release to being added?
+- Found the **top 5 ratings** by count and visualized them in a bar chart.  
+- Calculated **durations statistics** (min, max, average) for 1975–1984 movies.  
+- Identified years with the most **G-rated releases** and **overall releases**.  
+- Categorized movies into **short, average, and long** and visualized with a pie chart.  
+- Explored trends in release vs. added-to-platform gaps.  
+- Checked for content added post-pandemic and by specific keywords in titles.  
 
-13. How many movies were added during the first year after the pandemic lockdown? (Assume the lockdown began on March 16, 2020)
+---
 
-14. How many movies have been added on your birthday?
+## Learning Outcomes  
 
-15. How many TV shows or Movies have the word 'dog' in the title regardless if it is capitalized?
+This project reinforced skills in:  
+
+- **Data cleaning and subsetting** with Pandas  
+- **Aggregations and summary statistics**  
+- **Data visualization** (bar charts, scatterplots, pie charts)  
+- Applying **real-world business questions** to streaming service data  
+- Structuring analysis into a clear, reproducible Jupyter Notebook  
+
+---
+
+## Repository Contents  
+
+- **Dataset (`disney_plus.csv`)** – Raw Disney+ data  
+- **Notebook (`vmisonh_pythoncheckpoint.ipynb`)** – Python analysis and visualizations  
+- **README_task.md** – Detailed checkpoint task description  
