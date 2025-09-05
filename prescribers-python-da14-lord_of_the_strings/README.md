@@ -1,20 +1,74 @@
-# Tennessee's Opioid Crisis
+# Tennessee Opioid Prescribing & Overdose Analysis (2015–2018)  
 
-Opioids are a class of drugs including prescription pain relievers such as oxycodone and hydrocodone, the synthetic opioid fentanyl, and the illegal drug heroin. These drugs produce euphoria in addition to pain relief, which can lead to dependence, addiction, overdose, and death. 
+This project explores the opioid crisis in Tennessee using **Medicare Part D Prescriber data** and **state overdose death statistics**. The analysis investigates opioid prescription patterns, overdose mortality trends, and the association between prescribing rates and overdose deaths.  
 
-In the late 1990s, opioids began to be prescribed at high rates, which led to widespread misuse and ultimately created a serious national health crisis. In 2019, more than 130 people per day died from opioid-related drug overdoses in the United States. Tennessee has been one of the hardest-hit states in the opioid epidemic, with more than 1300 overdose deaths in 2018.
+This project was completed as part of the **Nashville Software School (NSS) Data Analytics Bootcamp**, combining SQL, Python, and visualization tools to analyze large healthcare datasets.  
 
-In this project, you will be working with a database created from the 2017 Medicare Part D Prescriber Public Use File to answer the following questions:  
-* Which Tennessee counties had a disproportionately high number of opioid prescriptions?
-* Who are the top opioid prescibers for the state of Tennessee?
-* What did the trend in overdose deaths due to opioids look like in Tennessee from 2015 to 2018?
-* Is there an association between rates of opioid prescriptions and overdose deaths by county?
-* Is there any association between a particular type of opioid and number of overdose deaths?
+---
 
-Note that some zip codes will be associated with multiple fipscounty values in the zip_fips table. To resolve this, use the fipscounty with the highest tot_ratio for each zipcode.
+## Project Overview  
 
-Feel free to include any additional data sets, but it is not a requirement.
+In this project, we analyzed data from the **2017 Medicare Part D Prescriber Public Use File (PUF)** alongside Tennessee Department of Health overdose statistics. Key questions addressed include:  
 
-With your group, create a 7-10 minute presentation addressing these questions.
+- Which Tennessee counties had disproportionately high opioid prescription rates?  
+- Who are the top opioid prescribers in the state?  
+- What was the trend in opioid-related overdose deaths in Tennessee from 2015 to 2018?  
+- Is there a correlation between opioid prescriptions and overdose deaths by county?  
+- Is there any association between specific opioids and overdose deaths?  
 
-updated : 4/22/2025
+---
+
+## Data Sources  
+
+- **CMS Medicare Part D Prescriber PUF** – Provider-level prescription claims and drug costs  
+- **Tennessee Overdose Death Records (2015–2018)** – County-level overdose statistics  
+- **Supplementary Tables** – Linking prescriber NPI, specialty, geography, and opioid classification  
+
+---
+
+## Tools & Technologies Used  
+
+- **Python (Jupyter Notebook)** – Data cleaning, joining, statistical analysis  
+- **SQLAlchemy** – Querying and joining large relational datasets  
+- **Pandas** – Aggregation, correlation, and filtering  
+- **Matplotlib / Seaborn** – Trend lines, scatterplots, and correlation visualization  
+- **ERD (Entity Relationship Diagram)** – For database schema design and relationships  
+
+---
+
+## Key Insights  
+
+- **Overdose deaths increased steadily** from 2015 to 2018 in Tennessee.  
+- A **strong positive correlation** exists between opioid prescriptions and overdose deaths at the county level.  
+- Certain counties, such as **Scott County**, showed extreme overdose-to-prescription ratios, identifying them as hotspots.  
+- A small group of **high-volume prescribers** accounted for thousands of opioid claims, disproportionately impacting prescription totals.  
+- No direct link could be established between **specific opioid types** and overdose deaths, since death records lack case-level drug information.  
+
+---
+
+## Learning Outcomes  
+
+Through this project, I developed expertise in:  
+
+- Working with **large-scale healthcare datasets** (Medicare Part D PUF)  
+- Designing and interpreting **ERDs** for relational data analysis  
+- Combining **prescription claims data with public health outcomes**  
+- Performing **statistical correlation and regression** analyses  
+- Communicating insights with clear visualizations and presentations  
+
+---
+
+## Repository Contents  
+
+- **ERD.png** – Entity Relationship Diagram for database design  
+- **prescribers.ipynb** – Jupyter Notebook with prescriber analysis  
+- **sqlalchemy.ipynb** – SQL queries and database joins using SQLAlchemy  
+- **overdose_chart.png** – Tennessee overdose death trend chart  
+- **prescriptions_vs_deaths.png** – Visualization of prescription counts vs. overdose deaths  
+- **tennessee_opioid_claims_map.png** – Geographic distribution of claims by county  
+- **Prescribers Presentation.pdf** – Final presentation deck summarizing findings  
+- **Part D Prescriber PUF Methodology.pdf** – CMS official data documentation  
+
+---
+
+This analysis demonstrates the intersection of **data analytics and public health policy**, showing how prescription monitoring can inform efforts to address the opioid epidemic.  

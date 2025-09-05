@@ -1,26 +1,63 @@
-### Datasets
-For this assessment you have been provided a single dataset, `gourds.csv`. This dataset contains the results of the Great Pumpkin Commonwealth Weighoff for the years 2013 through 2021. The columns of this dataframe are contained in the data dictionary.md file.
+# Great Pumpkin Commonwealth (GPC) Weighoff Analysis – Gourds Project  
 
-### Instructions
-1. Create a Jupyter notebook and name it <firstname_gourds>. For example, John Smith's notebook would be named `john_gourds.ipynb`
-2. Read in the gourds data into a DataFrame named `gourds` and look at the top 5 rows.
-3. Create a visualization (your choice) which shows the distribution of weights across the dataset. What do you notice from this visualization?
-4. The place column contains the finishing position of a gourd within its category for a given year. Convert this column to a numeric type. (Note: this column contains two non-numeric values - 'EXH' and 'DMG'. You can replace these values with NaN.). If you cannot find a solution for this question, you can use the `place_bk` column in order to answer the questions that follow that rely on it.
-5. Which country shows up the most frequently in the dataset? Create a visualization (your choice) to show the frequency of appearances for the top 5 countries in terms of number of appearances.
-6. The `id` column contains contains a concatenation of the year and an abbreviation for the type of gourd. For example "2013-F" means that this record is from the year 2013, and the gourd is of type "F" (which stands for Field Pumpkin). Create two new columns, `year` and `type` by extracting these values from the `id` column. If you cannot find a solution for this question, you can use the `year_bk` and `type_bk` columns to answer the questions below that rely on it.
-7. Create a line plot showing the trend in the **heaviest** gourd by year. What do you notice?
-8. Replace the type abbreviations with the full names of each type. 
-    ```
-    "F": "Field Pumpkin"
-    "P": "Giant Pumpkin"
-    "S": "Giant Squash"
-    "W": "Giant Watermelon"
-    "T": "Tomato"
-    "L": "Long Gourd"
-    ```
-    Which type of gourd is heaviest on average? Create a visualization showing the distribution of gourd weights by type.
+This project analyzes results from the **Great Pumpkin Commonwealth (GPC) Weighoff** spanning 2013–2021. The dataset includes weights, rankings, growers, and genetic lineage of competitive gourds such as giant pumpkins, squashes, long gourds, and tomatoes.  
 
-9. Create a visualization to compare the estimated weight (`est_weight`) to the actual weight (`weight_lbs`). What do you notice?
-10. Create a new column `weight_error` that contains the amount by which the estimated weight exceeded the actual weight. What is the worst overestimate of a gourd weight? What percentage of gourd weights are overestimated?
-11. Some growers compete across multiple types of gourd. Which grower has **top 10** finishes across the largest number of types of gourds? What is this grower's best finish in the GPC Weighoff in the years that are covered in this dataset?
-12. How many gourds have at least 100 offspring that have appeared in the GPC Weighoff? You can count a pumpkin as having an offspring if it is either the seed_mother or pollinator_father. Hint: One way you could do this is to create two `value_counts` Series on the `seed_mother` and `pollinator_father` columns and merge them.
+The analysis was completed as part of the **Nashville Software School (NSS) Data Analytics Bootcamp**, with a focus on **Python, Pandas, and data visualization**.  
+
+---
+
+## Project Overview  
+
+The dataset `gourds.csv` contains competitive weighoff results including variables like weight, grower, country, gourd type, estimated vs. actual weights, and genetic information【103†source】【104†source】.  
+
+Key questions addressed:  
+- Which countries appear most frequently in the dataset?  
+- What is the trend of the **heaviest gourd by year**?  
+- Which gourd type is the heaviest on average?  
+- How accurate are estimated weights compared to actual weights?  
+- What is the largest overestimate of a gourd’s weight?  
+- Which growers compete across multiple types and achieve top finishes?  
+- Which gourds have 100+ offspring in competitions?  
+
+---
+
+## Tools & Technologies Used  
+
+- **Python (Jupyter Notebook)** – Data cleaning, exploration, and visualizations  
+- **Pandas** – Data wrangling, type conversions, and aggregation  
+- **Matplotlib & Seaborn** – Distribution, trend, and comparison plots  
+- **CSV Dataset** – GPC Weighoff results (2013–2021)  
+
+---
+
+## Key Insights  
+
+- **Country Analysis** – Identified top countries with the most weighoff entries.  
+- **Yearly Trends** – Line plots revealed trends in maximum gourd weights over time.  
+- **Type Comparison** – Giant pumpkins dominated as the heaviest type overall.  
+- **Estimation Errors** – Visualizations showed frequent overestimation vs. actual weights, with notable extreme cases.  
+- **Grower Achievements** – Certain growers achieved top finishes across multiple gourd types.  
+- **Genetics** – Analysis of seed mothers and pollinator fathers revealed gourds with large numbers of competitive offspring.  
+
+---
+
+## Learning Outcomes  
+
+This project strengthened skills in:  
+- Handling mixed data (numeric + categorical + genetic lineage).  
+- Using **Pandas transformations** (column extraction, replacement, and merging).  
+- Building clear **data visualizations** to reveal competition trends.  
+- Applying **real-world agricultural data** to advanced analytics questions.  
+
+---
+
+## Repository Contents  
+
+- **gourds.csv** – Dataset of GPC Weighoff results  
+- **data_dictionary.md** – Data dictionary with column descriptions  
+- **vladyslav_gourds.ipynb** – Jupyter Notebook with full analysis  
+- **README_task.md** – Original project task description  
+
+---
+
+This project demonstrates how **data analytics can reveal insights from competitive agricultural events**, highlighting both trends in record-breaking produce and the growers driving them.  
