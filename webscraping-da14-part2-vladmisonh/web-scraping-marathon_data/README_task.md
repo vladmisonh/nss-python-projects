@@ -32,11 +32,3 @@ Expected number of rows:
 2019 = 2811
 2018 = 2115
 2017 = 3651
-
-```
-
-
-**After loading the marathon and half-marathon data to DataFrames in Python, perform EDA as usual. Think of a question that you find interesting and answer it by exploring the data. Prepare a brief (5 minutes) presentation to share what you find.**
-
-
-![runners](assets/marathon.jpeg)
